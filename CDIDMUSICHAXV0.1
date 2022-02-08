@@ -1,0 +1,127 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local CDIDHAXMUSIC = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local musiccid = Instance.new("TextBox")
+local stopbut = Instance.new("TextButton")
+local playbut = Instance.new("TextButton")
+local volin = Instance.new("TextBox")
+local pitchin = Instance.new("TextBox")
+local volt = Instance.new("TextLabel")
+local pitt = Instance.new("TextLabel")
+local muidt = Instance.new("TextLabel")
+local TextLabel = Instance.new("TextLabel")
+
+--Properties:
+
+CDIDHAXMUSIC.Name = "CDIDHAXMUSIC"
+CDIDHAXMUSIC.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+Frame.Parent = CDIDHAXMUSIC
+Frame.BackgroundColor3 = Color3.fromRGB(63, 63, 63)
+Frame.Position = UDim2.new(0.0354879498, 0, 0.0388692617, 0)
+Frame.Size = UDim2.new(0, 149, 0, 168)
+
+musiccid.Name = "musiccid"
+musiccid.Parent = Frame
+musiccid.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+musiccid.Position = UDim2.new(0.114093959, 0, 0.291666657, 0)
+musiccid.Size = UDim2.new(0, 114, 0, 21)
+musiccid.Font = Enum.Font.SourceSans
+musiccid.Text = ""
+musiccid.TextColor3 = Color3.fromRGB(255, 255, 255)
+musiccid.TextSize = 14.000
+
+stopbut.Name = "stopbut"
+stopbut.Parent = Frame
+stopbut.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+stopbut.Position = UDim2.new(0.107382596, 0, 0.827380955, 0)
+stopbut.Size = UDim2.new(0, 55, 0, 21)
+stopbut.Font = Enum.Font.SciFi
+stopbut.Text = "Stop"
+stopbut.TextColor3 = Color3.fromRGB(0, 0, 0)
+stopbut.TextSize = 14.000
+
+playbut.Name = "playbut"
+playbut.Parent = Frame
+playbut.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+playbut.Position = UDim2.new(0.510067165, 0, 0.827380955, 0)
+playbut.Size = UDim2.new(0, 55, 0, 21)
+playbut.Font = Enum.Font.SciFi
+playbut.Text = "Play"
+playbut.TextColor3 = Color3.fromRGB(0, 0, 0)
+playbut.TextSize = 14.000
+
+volin.Name = "volin"
+volin.Parent = Frame
+volin.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+volin.Position = UDim2.new(0.476510108, 0, 0.476190478, 0)
+volin.Size = UDim2.new(0, 58, 0, 21)
+volin.Font = Enum.Font.SourceSans
+volin.Text = ""
+volin.TextColor3 = Color3.fromRGB(255, 255, 255)
+volin.TextSize = 14.000
+
+pitchin.Name = "pitchin"
+pitchin.Parent = Frame
+pitchin.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+pitchin.Position = UDim2.new(0.476510108, 0, 0.636904776, 0)
+pitchin.Size = UDim2.new(0, 58, 0, 21)
+pitchin.Font = Enum.Font.SourceSans
+pitchin.Text = ""
+pitchin.TextColor3 = Color3.fromRGB(255, 255, 255)
+pitchin.TextSize = 14.000
+
+volt.Name = "volt"
+volt.Parent = Frame
+volt.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+volt.Position = UDim2.new(0.107382603, 0, 0.476190478, 0)
+volt.Size = UDim2.new(0, 49, 0, 21)
+volt.Font = Enum.Font.SciFi
+volt.Text = "Volume"
+volt.TextColor3 = Color3.fromRGB(255, 255, 255)
+volt.TextSize = 14.000
+
+pitt.Name = "pitt"
+pitt.Parent = Frame
+pitt.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+pitt.Position = UDim2.new(0.107382603, 0, 0.636904776, 0)
+pitt.Size = UDim2.new(0, 49, 0, 21)
+pitt.Font = Enum.Font.SciFi
+pitt.Text = "Pitch"
+pitt.TextColor3 = Color3.fromRGB(255, 255, 255)
+pitt.TextSize = 14.000
+
+muidt.Name = "muidt"
+muidt.Parent = Frame
+muidt.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+muidt.Position = UDim2.new(0.107382603, 0, 0.214285716, 0)
+muidt.Size = UDim2.new(0, 115, 0, 13)
+muidt.Font = Enum.Font.SciFi
+muidt.Text = "ID MUSIC HERE"
+muidt.TextColor3 = Color3.fromRGB(0, 0, 0)
+muidt.TextSize = 14.000
+
+TextLabel.Parent = CDIDHAXMUSIC
+TextLabel.BackgroundColor3 = Color3.fromRGB(86, 86, 86)
+TextLabel.Position = UDim2.new(0.0354879498, 0, 0.038869258, 0)
+TextLabel.Size = UDim2.new(0, 149, 0, 30)
+TextLabel.Font = Enum.Font.SciFi
+TextLabel.Text = "CDID HAX MUSIX V0.1"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 14.000
+
+local volinpu = volin.Text
+local pitchinpu = pitchin.Text
+Local musikidi = musiccid.Text
+
+playbut.MouseButton1Click:(function))
+	local vehs = game.Workspace.Vehicles:GetChildren()
+	for i,v in pairs(vehs) do
+	   v.suarabratatak:FireServer("newSound","NiceSong",v:FindFirstChild("DriveSeat"),musikidi,pitchinpu,volinpu,true)
+	   v.suarabratatak:FireServer("playSound","NiceSong")
+	end -- Shoutout to SimpleSpy
+end)
