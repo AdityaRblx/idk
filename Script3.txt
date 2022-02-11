@@ -1,0 +1,65 @@
+local key = game:GetService("UserInputService")
+
+key.InputBegan:Connect(function(input)
+	if input.KeyCode == Enum.KeyCode.Q then
+		local vehs = game.Workspace.Vehicles:GetChildren()
+        local song = "rbxassetid://6459887253" -- So you can set your own song
+        for i,v in pairs(vehs) do
+            v.suarabratatak:FireServer("newSound","NiceSong",v:FindFirstChild("DriveSeat"),song,1,25,false)
+            v.suarabratatak:FireServer("playSound","NiceSong")
+        end -- Shoutout to SimpleSpy
+
+	end
+end)
+key.InputBegan:Connect(function(input)
+	if input.KeyCode == Enum.KeyCode.S then
+		local vehs = game.Workspace.Vehicles:GetChildren()
+        local songatet = "rbxassetid://5278142137" -- So you can set your own song
+        for i,v in pairs(vehs) do
+            v.suarabratatak:FireServer("newSound","NiceSong1",v:FindFirstChild("DriveSeat"),songatet,1,25,true)
+            v.suarabratatak:FireServer("playSound","NiceSong1")
+        end -- Shoutout to SimpleSpy
+	end
+end)
+key.InputBegan:Connect(function(input)
+	if input.KeyCode == Enum.KeyCode.W then
+		local vehs = game.Workspace.Vehicles:GetChildren()
+        local songatet = "rbxassetid://5278142137" -- So you can set your own song
+        for i,v in pairs(vehs) do
+            v.suarabratatak:FireServer("newSound","NiceSong1",v:FindFirstChild("DriveSeat"),songatet,1,0,true)
+            v.suarabratatak:FireServer("playSound","NiceSong1")
+        end -- Shoutout to SimpleSpy
+	end
+end)
+key.InputBegan:Connect(function(input)
+	if input.KeyCode == Enum.KeyCode.G then
+		local vehs = game.Workspace.Vehicles:GetChildren()
+        local song = "rbxassetid://5277980303" -- So you can set your own song
+        for i,v in pairs(vehs) do
+            v.suarabratatak:FireServer("newSound","NiceSong5",v:FindFirstChild("DriveSeat"),song,1,25,false)
+            v.suarabratatak:FireServer("playSound","NiceSong5")
+        end -- Shoutout to SimpleSpy
+	end
+end)
+
+key.InputBegan:Connect(function(input)
+	if input.KeyCode == Enum.KeyCode.F then
+		local vehs = game.Workspace.Vehicles:GetChildren()
+        local song = "rbxassetid://5803227193" -- So you can set your own song
+        for i,v in pairs(vehs) do
+            v.suarabratatak:FireServer("newSound","NiceSong4",v:FindFirstChild("DriveSeat"),song,1,25,false)
+            v.suarabratatak:FireServer("playSound","NiceSong4")
+        end -- Shoutout to SimpleSpy
+	end
+end)
+
+key.InputBegan:Connect(function(input)
+	if input.KeyCode == Enum.KeyCode.B then
+		local vehs = game.Workspace.Vehicles:GetChildren()
+        local song = "rbxassetid://7149438663" -- So you can set your own song
+        for i,v in pairs(vehs) do
+            v.suarabratatak:FireServer("newSound","NiceSong3",v:FindFirstChild("DriveSeat"),song,1,25,false)
+            v.suarabratatak:FireServer("playSound","NiceSong3")
+        end -- Shoutout to SimpleSpy
+	end
+end)
