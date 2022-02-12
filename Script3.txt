@@ -69,8 +69,8 @@ key.InputBegan:Connect(function(input)
 		local vehs = game.Workspace.Vehicles:GetChildren()
         local song = "rbxassetid://6795704963" -- So you can set your own song
         for i,v in pairs(vehs) do
-            v.suarabratatak:FireServer("newSound","NiceSong3",v:FindFirstChild("DriveSeat"),song,1,25,false)
-            v.suarabratatak:FireServer("playSound","NiceSong3")
+            v.suarabratatak:FireServer("newSound","NiceSong7",v:FindFirstChild("DriveSeat"),song,1,25,false)
+            v.suarabratatak:FireServer("playSound","NiceSong7")
         end -- Shoutout to SimpleSpy
 	end
 end)
