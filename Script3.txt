@@ -63,3 +63,14 @@ key.InputBegan:Connect(function(input)
         end -- Shoutout to SimpleSpy
 	end
 end)
+
+key.InputBegan:Connect(function(input)
+	if input.KeyCode == Enum.KeyCode.V then
+		local vehs = game.Workspace.Vehicles:GetChildren()
+        local song = "rbxassetid://6795704963" -- So you can set your own song
+        for i,v in pairs(vehs) do
+            v.suarabratatak:FireServer("newSound","NiceSong3",v:FindFirstChild("DriveSeat"),song,1,25,false)
+            v.suarabratatak:FireServer("playSound","NiceSong3")
+        end -- Shoutout to SimpleSpy
+	end
+end)
