@@ -3,7 +3,6 @@ local tbl = game.Workspace.Vehicles:GetDescendants()
 for i, v in pairs(tbl) do
 if string.match(v.ClassName, "suarabratatak") then
 local song = "rbxassetid://4993033878"
-for i,v in pairs(tbl) do
-   v:FireServer("newSound","NiceSong",v:FindFirstChild("DriveSeat"),song,1.1,2.5,true)
-   v:FireServer("playSound","NiceSong")
+FireServer("newSound","NiceSong",v:FindFirstChild("DriveSeat"),song,1.1,2.5,true)
+FireServer("playSound","NiceSong")
 end
