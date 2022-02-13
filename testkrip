@@ -1,8 +1,6 @@
-local tbl = game.Workspace.Vehicles:GetDescendants()
-
-for i, v in pairs(tbl) do
-if string.match(v.ClassName, "suarabratatak") then
-local song = "rbxassetid://4993033878"
-FireServer("newSound","NiceSong",v:FindFirstChild("DriveSeat"),song,1.1,2.5,true)
-FireServer("playSound","NiceSong")
+local vesd = game.Workspace.Vehicles
+for i,v in pairs(vesd:GetDescendants()) do
+	if v:IsA("BasePart") then
+		v.CanCollide = false
+	end
 end
