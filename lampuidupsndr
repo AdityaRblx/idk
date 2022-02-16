@@ -2,26 +2,24 @@ local key = game:GetService("UserInputService")
 
 key.InputBegan:Connect(function(input)
 	if input.KeyCode == Enum.KeyCode.L then
-  local vesd = game.Workspace.Vehicles
-  for i,v in pairs(vesd:GetDescendants()) do
-      if string.match(v.ClassName,"RemoteEvent") then
-          v:FireServer("updateLights","beam",true)
-          v:FireServer("blinkers","Hazards")
-          v:FireServer("updateLights","reverse",true)
-      end
-  end
+  	local vesd = game.Workspace.Vehicles
+ 	 for i,v in pairs(vesd:GetDescendants()) do
+   	   if string.match(v.ClassName,"RemoteEvent") then
+  	        v:FireServer("updateLights","beam",true)
+ 	        v:FireServer("blinkers","Hazards")
+		v:FireServer("updateLights","reverse",true)
+   	   end
+	end
 end)  
-
-local key = game:GetService("UserInputService")
 
 key.InputBegan:Connect(function(input)
 	if input.KeyCode == Enum.KeyCode.K then
-  local vesd = game.Workspace.Vehicles
-  for i,v in pairs(vesd:GetDescendants()) do
-      if string.match(v.ClassName,"RemoteEvent") then
-          v:FireServer("updateLights","beam",false)
-          v:FireServer("blinkers","Hazards")
-          v:FireServer("updateLights","reverse",false)
-      end
-  end
+  	local vesd = game.Workspace.Vehicles
+ 	 for i,v in pairs(vesd:GetDescendants()) do
+   	   if string.match(v.ClassName,"RemoteEvent") then
+  	        v:FireServer("updateLights","beam",false)
+ 	        v:FireServer("blinkers","Hazards")
+		v:FireServer("updateLights","reverse",false)
+   	   end
+	end
 end)  
