@@ -1,3 +1,7 @@
+local cmp = game.Workspace.CamPart2
+local car = game.Players.LocalPlayer.Character.Humanoid.SeatPart.Parent
+car.Parent = cmp
+wait(0.5)
 local vesd = game.Workspace.Vehicles
 for i,v in pairs(vesd:GetDescendants()) do
 	if v:IsA("BasePart") then
