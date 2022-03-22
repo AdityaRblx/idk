@@ -210,10 +210,15 @@ discordSection:addButton(syn and "Join the Discord server" or "Copy Discord Link
 	end
 	setclipboard("https://www.discord.com/invite/afSxatJjTg")
 end)
-local mouse = game.Players.LocalPlayer:GetMouse()
-mouse.KeyDown:connect(function(key)
-	if key:lower() == "e" then
+breh.Main.Active = true
+breh.Main.Draggable = true
+local key = game:GetService("UserInputService")
+
+key.InputBegan:Connect(function(input)
+	if input.KeyCode == Enum.KeyCode.Q then
 		breh.Enabled = false
 		else
 		breh.Enabled = true
-end
+		
+	end
+end)
