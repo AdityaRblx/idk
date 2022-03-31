@@ -1,10 +1,10 @@
-local VenyxLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AbamJelek/roblox-scripts/main/Universal%20Vehicle%20Script/venyx.lua"))()
+local VenyxLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AdityaRblx/idk/main/VENYXLIB"))()
 local Venyx = VenyxLibrary.new("LOL", 5013109572)
-local breh = game.CoreGui.LOL
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local UserInputService = game:GetService("UserInputService")
 local LocalPlayer = Players.LocalPlayer
+local breh = LocalPlayer.PlayerGui.Map.LOL
 
 local Theme = {
 	Background = Color3.fromRGB(61, 60, 124), 
@@ -217,8 +217,11 @@ local key = game:GetService("UserInputService")
 key.InputBegan:Connect(function(input)
 	if input.KeyCode == Enum.KeyCode.Q then
 		breh.Enabled = false
-		else
-		breh.Enabled = true
-		
 	end
 end)
+key.InputBegan:Connect(function(input)
+	if input.KeyCode == Enum.KeyCode.T then
+		breh.Enabled = true
+	end
+end)
+
