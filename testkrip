@@ -1,4 +1,4 @@
-local cmp = game.Workspace.CamPart2
+local cmp = game.Workspace
 local car = game.Players.LocalPlayer.Character.Humanoid.SeatPart.Parent
 car.Parent = cmp
 wait(0.5)
