@@ -26,22 +26,12 @@ local LastU = tick()
 
 --// Exploit Fix \\--
 
-if not pcall(function() return syn.protect_gui end) then
 
-    syn = {}
-
-    syn.protect_gui = function(A_1)
-
-        A_1.Parent = game.Players.LocalPlayer.PlayerGui.Map
-
-    end
-
-end
 
 --// UI Library \\--
 
 local Library = loadstring(game:HttpGetAsync('https://pastebin.com/raw/edJT9EGX'))()
-
+Library.Parent = game.Players.LocalPlayer.PlayerGui.Map
 local Window = Library:CreateWindow("AutoClicker by Ezpi")
 
 Enabled_1 = Window:AddColor({
