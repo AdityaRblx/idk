@@ -217,11 +217,9 @@ local key = game:GetService("UserInputService")
 key.InputBegan:Connect(function(input)
 	if input.KeyCode == Enum.KeyCode.Q then
 		breh.Enabled = false
-	end
-end)
-key.InputBegan:Connect(function(input)
-	if input.KeyCode == Enum.KeyCode.T then
+	else
 		breh.Enabled = true
 	end
 end)
+
 
