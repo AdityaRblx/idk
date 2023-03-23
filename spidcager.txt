@@ -214,14 +214,20 @@ breh.Main.Active = true
 breh.Main.Draggable = true
 local key = game:GetService("UserInputService")
 
-key.InputBegan:Connect(function(input)
-	if input.KeyCode == Enum.KeyCode.Q then
-		if breh == true then
-			breh.Enabled = false
-		end
-		if breh == false then
-			breh.Enabled = true
-		end
+local screengui = breh
+
+-- Set the initial visibility state to true
+screengui.Enabled = true
+
+-- Define a function to toggle the visibility of the ScreenGui
+local function toggleVisibility()
+	screengui.Enabled = not screengui.Enabled
+end
+
+-- Connect the toggleVisibility function to the "q" key
+game:GetService("UserInputService").InputBegan:Connect(function(input, processed)
+	if not processed and input.KeyCode == Enum.KeyCode.Q then
+		toggleVisibility()
 	end
 end)
 
